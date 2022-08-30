@@ -1,0 +1,177 @@
+/* Общие настройки для страницы */
+
+*, 
+*::before,
+*::after{
+    margin:0;
+    box-sizing:border-box;
+    /* line-height: 30px; */
+    text-decoration: none;
+    color:#fff;
+}
+
+/* Контейнер, куда будут помещаться данные */
+
+
+.container{
+    width:70vw;
+    margin:0 auto;
+
+}
+
+
+
+/* Шапка */
+
+
+.header{
+    display:grid;
+    grid-template-columns: 1fr 10fr 4fr;
+    height: 10vh;
+    width:100%;
+    max-width:1980px;
+    background-color: black;
+    align-content: center;
+    justify-items:center;
+}
+
+/* .header_logo{
+
+} */
+
+
+.header-text{
+    font-size: 30px;
+    margin-left:10em;
+    letter-spacing: 0.2em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+
+
+/* Верхнее меню с ссылками */
+.top-menu{
+    display: inline-flex;
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    width:90%;
+    grid-column-start:3;
+    justify-content: space-around;
+
+}
+
+
+.menu-punkt{
+    transition: color .3s linear;
+}
+
+
+.menu-punkt:hover{
+    color:#fce38a;
+}
+
+
+/* форма ввода */
+
+.input{
+    margin: 1.5em 0 0;
+    animation-name: input;
+    animation-iteration-count: 1;
+    animation-duration:1.5s;
+    animation-timing-function: linear;
+
+}
+
+/* Форма */
+
+.form-input{
+    display:grid;
+    column-gap: 0.3em;
+    padding:0.5em 0.5em;
+    grid-template: repeat(16,1fr)/1.5fr 4fr;
+    min-height: 80vh;
+    align-items: center;
+    
+}
+
+/* Стили для текста */
+
+.label{
+    display:flex;
+    color:#000;
+    height: 2em;
+    font-size: 18px;
+    font-weight: 600;
+    justify-content:flex-start;
+    margin:0.05em;
+    word-wrap: normal;
+}
+
+/* Текстовые поля ввода */
+
+.input-text{
+    color:#000;
+    min-height:2em;
+    
+}
+
+
+/* Текстовые поля ввода */
+
+.input-date{
+    color:#000;
+    min-height:2em;
+    
+}
+
+/* Выпадающий список */
+
+.input-select{
+    color:#000;
+    min-height:2em;
+}
+
+.btn-form{
+    margin:1em auto 1em;
+    min-width:15vw;
+    min-height: 3em;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+    color:#fff;
+    grid-column: 1 / span 2;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    transition: background-color .5s linear, color .5s linear;
+}
+
+.btn-form:hover{
+    cursor:pointer;
+    color: #000;
+    background-color: #fce38a;
+}
+
+/* подвал */
+
+.footer{
+    display:block;
+    height: 5vh;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Анимация */
+
+@keyframes input{
+    0%{
+        opacity:0%;
+    }
+    100%{
+        opacity:100%;
+    }
+}
